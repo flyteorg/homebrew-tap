@@ -5,24 +5,24 @@
 class Flytectl < Formula
   desc "FlyteCtl is a command line tool to interact with a Flyte cluster."
   homepage "https://docs.flyte.org/projects/flytectl"
-  version "0.2.23"
+  version "0.2.24"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.2.23/flytectl_Darwin_x86_64.tar.gz"
-      sha256 "3585599a7d9b0fdfd31965dca36696c3c45ba58e1371b1101d09f77bc244c7bd"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.2.24/flytectl_Darwin_x86_64.tar.gz"
+      sha256 "fa343287e5c8dfcb6d01540636a76096ef5de38151f9b1eca8a61f5e055afe38"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.2.23/flytectl_Linux_x86_64.tar.gz"
-      sha256 "161b4ab53c9ed833dc618ea35cb2a4cd7ae2f16fdf60cacbd62bfe0b09fc390f"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.2.24/flytectl_Linux_x86_64.tar.gz"
+      sha256 "5a8ff8914a2d3a8255cce96854692a4b2a3c76df6248783c6fa260b901ed678a"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.2.23/flytectl_Linux_arm64.tar.gz"
-      sha256 "55697798b520c84a82c7331d5e794329fe10d9425164f2d36ebb7fffe912e4e9"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.2.24/flytectl_Linux_arm64.tar.gz"
+      sha256 "60f406254271ed2ed52a97dd15da1b19abfcd59a5e82064ac3971ecbedcd8faf"
     end
   end
 
