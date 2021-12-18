@@ -5,20 +5,20 @@
 class Flytectl < Formula
   desc "FlyteCtl is a command line tool to interact with a Flyte cluster."
   homepage "https://docs.flyte.org/projects/flytectl"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.1/flytectl_Darwin_x86_64.tar.gz"
-      sha256 "33ccab9b970eb2dc7d308892cdc8fada0ec6c5cd4fe66995bd96e7b1083437dd"
+    if Hardware::CPU.arm?
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.2/flytectl_Darwin_arm64.tar.gz"
+      sha256 "d0e77a0d848b7696e842f864fa3ea9d494e440d955ac66decccb92882346d526"
 
       def install
         bin.install "flytectl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.1/flytectl_Darwin_arm64.tar.gz"
-      sha256 "ba23b3461f1cab51c5638a126911216d7555738fac71fd8ee3b1535bd4a2a3e2"
+    if Hardware::CPU.intel?
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.2/flytectl_Darwin_x86_64.tar.gz"
+      sha256 "87ba5872cead13c16f5f63e1a8e3add40da114277c02e4ee2a0a26f0382e1adb"
 
       def install
         bin.install "flytectl"
@@ -27,17 +27,17 @@ class Flytectl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.1/flytectl_Linux_x86_64.tar.gz"
-      sha256 "9ec8de558401ee22fa6a577ba2ce6343124d1181822019ef62b2261cc0e42e4c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.2/flytectl_Linux_arm64.tar.gz"
+      sha256 "6e446b8d4c56a32cce0a6516f573e815708f23e93276fbe56f8626ed6a7ad502"
 
       def install
         bin.install "flytectl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.1/flytectl_Linux_arm64.tar.gz"
-      sha256 "0a8a3677843899e3fcecf342aaa9f2118021040b75c5115c66abdc4e0f87610e"
+    if Hardware::CPU.intel?
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.4.2/flytectl_Linux_x86_64.tar.gz"
+      sha256 "66f16040ed9ae9f9f11f11d1a0e2b59ce2fc5644675e94fc589aaa825f26bdaa"
 
       def install
         bin.install "flytectl"
