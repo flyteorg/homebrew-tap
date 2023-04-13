@@ -5,20 +5,20 @@
 class Flytectl < Formula
   desc "FlyteCtl is a command line tool to interact with a Flyte cluster."
   homepage "https://docs.flyte.org/projects/flytectl"
-  version "0.6.34"
+  version "0.6.35"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.34/flytectl_Darwin_x86_64.tar.gz"
-      sha256 "e54c9ec58c2d25c904cb3a18875b6ce037e538f75a8cc65e18ddc8803c0890be"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.35/flytectl_Darwin_x86_64.tar.gz"
+      sha256 "24f00e77a2d6741ff0d2c1f28a185398852ec09ce2f67f793d81a59e6f993931"
 
       def install
         bin.install "flytectl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.34/flytectl_Darwin_arm64.tar.gz"
-      sha256 "a2009796303a3242bd32a2149a09266cf651d3114fc5a4667bb7d88b343c8839"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.35/flytectl_Darwin_arm64.tar.gz"
+      sha256 "76f1bf468d1db23a785c92f2b622b4dfa2bebae82303a382b942b22dda064e87"
 
       def install
         bin.install "flytectl"
@@ -28,16 +28,16 @@ class Flytectl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.34/flytectl_Linux_x86_64.tar.gz"
-      sha256 "7debfe07c904cd1b1a2a508d3a264294ade682d5e3269e1f33758a29cc5b175c"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.35/flytectl_Linux_x86_64.tar.gz"
+      sha256 "1a6688d6d52ad5141beb8ca80388a6f532ddf88834e3fbacd3b592f0d14a57b7"
 
       def install
         bin.install "flytectl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.34/flytectl_Linux_arm64.tar.gz"
-      sha256 "af34fd513c5617956796b9eb7a125afd499d6823aad4e1450ee49249e96981c8"
+      url "https://github.com/flyteorg/flytectl/releases/download/v0.6.35/flytectl_Linux_arm64.tar.gz"
+      sha256 "cf155397c81a0638744091e8a21c717c45a1b7135701f6be561f93ed168cb48d"
 
       def install
         bin.install "flytectl"
